@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00024D"
+    tools:context=".SplashActivity">
+    <ImageView
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:src="@drawable/mainlogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/logo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Safe Ways"
+        android:textSize="25sp"
+        android:fontFamily="@font/magra_regular"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/logo"
+        app:layout_constraintEnd_toEndOf="@id/logo"
+        app:layout_constraintTop_toBottomOf="@id/logo"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Version: 1.0.0"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center"
+        android:fontFamily="@font/magra_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

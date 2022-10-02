@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="4sp"
+    android:layout_height="65sp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/recentloc_back"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/recentImg"
+            android:layout_width="63sp"
+            android:layout_height="60sp"
+            android:src="@drawable/ic_recent"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/locationname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7sp"
+            android:layout_toRightOf="@id/recentImg"
+            android:text="India Gate"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/adress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/locationname"
+            android:layout_marginStart="7sp"
+            android:maxLines="2"
+            android:layout_toRightOf="@id/recentImg"
+            android:text="kartaya path ,New Delhi 110028"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </RelativeLayout>
+</LinearLayout>

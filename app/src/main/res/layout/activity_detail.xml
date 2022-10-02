@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gradient"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <!--    closing of temp tab-->
+    <com.clk.progress.CircularProgress
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/circularProgress"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="284dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/top_bar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10sp"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:text="Area Name Here"
+                android:fontFamily="@font/magra_regular"
+                android:textSize="29sp"
+                android:id="@+id/name"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:fontFamily="@font/magra_regular"
+                android:text="complemte adress here"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:id="@+id/completeLoc"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="10sp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/magra_regular"
+                    android:text="Email: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/magra_regular"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="not available"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email"
+                    android:fontFamily="@font/magra_regular"
+                    android:layout_marginTop="5sp"
+                    android:text="Phone no: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5sp"
+                    android:fontFamily="@font/magra_regular"
+                    android:text="9711439393"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phone"
+                    android:layout_marginTop="5sp"
+                    android:fontFamily="@font/magra_regular"
+                    android:text="Website: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/phone"
+                    android:fontFamily="@font/magra_regular"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5sp"
+                    android:text="not found"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/website"
+                    android:layout_marginTop="5sp"
+                    android:text="Status: "
+                    android:fontFamily="@font/magra_regular"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/website"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5sp"
+                    android:text="open"
+                    android:fontFamily="@font/magra_regular"
+                    android:textColor="@color/black" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distance From Me: "
+                    android:fontFamily="@font/magra_regular"
+                    android:layout_below="@id/status"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5sp"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/status"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/magra_regular"
+                    android:text="loading..."
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estimated Time :"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/magra_regular"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/distance"
+                    android:layout_marginTop="5sp"/>
+
+                <TextView
+                    android:id="@+id/estimated_Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/distance"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5sp"
+                    android:text="loading..."
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+        </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20sp"
+                android:src="@drawable/call_button"
+                android:id="@+id/call"/>
+        </RelativeLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

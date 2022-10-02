@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Safeway</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <!--    <string name="apiKey">AIzaSyDiT71bT7Ql0s50AEkL4LjF98HdrIJLrag</string>-->
+    <string name="apiKey">AIzaSyCKPH_dYkt6H3tX2IG0PaxqhQxYxgMKJys</string>
+    <string name="new_api_key">c1ff9b83443247ddba59d66686b93c44</string>
+</resources>

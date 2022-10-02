@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/ic_sos_map"
+    android:layout_height="match_parent"
+    tools:context=".SosActivity">
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30sp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:id="@+id/sname"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/sname"
+                android:id="@+id/name"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ephone one"
+                android:id="@+id/ephoneone"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ephoneone"
+                android:id="@+id/ephone1"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ephone two"
+                android:id="@+id/ephonetwo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ephonetwo"
+                android:id="@+id/ephone2"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/headingone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textStyle="bold"
+        android:fontFamily="@font/magra_regular"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="You Pressed The SOS Button"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+    <androidx.cardview.widget.CardView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headingone"
+        android:layout_width="302sp"
+        android:layout_height="402sp"
+        android:elevation="10sp"
+        app:cardCornerRadius="27sp"
+        app:cardUseCompatPadding="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="13sp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/hello"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hey,"
+                    android:fontFamily="@font/magra_regular"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/Name_here"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/magra_regular"
+                    android:layout_toRightOf="@id/hello"
+                    android:text="Name Here"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:fontFamily="@font/magra_regular"
+                android:text="You are about to make an emergency call to the concerned authorities."
+                android:layout_margin="3sp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/warning1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="@font/magra_regular"
+                    android:text="Connecting Call in the next"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/countdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/warning1"
+                    android:layout_marginStart="4sp"
+                    android:text="10"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/countdown"
+                    android:layout_marginStart="10sp"
+                    android:text="Your Current Location is:"
+                    android:fontFamily="@font/magra_regular"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+            <TextView
+                android:layout_marginTop="17sp"
+                android:layout_width="265sp"
+                android:layout_height="85sp"
+                android:layout_marginStart="2sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/magra_regular"
+                android:text="Wz 845 Naraina Village New Delhi 10028,India"
+                android:gravity="center"
+                android:id="@+id/latitudeLocation"/>
+
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/buttonsegment"
+                android:layout_marginBottom="5sp"
+                android:fontFamily="@font/magra_regular"
+                android:text="If you did it by mistake, press CANCEL"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+            <RelativeLayout
+                android:id="@+id/buttonsegment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5sp"
+                android:layout_marginBottom="15sp"
+                android:layout_marginEnd="5sp">
+
+                <ImageView
+                    android:id="@+id/call_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_callnowsvg" />
+
+                <ImageView
+                    android:id="@+id/cancel_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_cancelnowsvg" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_custom_bottom_sos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="10sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="30sp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="101sp"
+                android:src="@drawable/accident"
+                android:id="@+id/accident_attack"/>
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="101sp"
+                android:layout_marginStart="10sp"
+                android:src="@drawable/health_emergency"
+                android:id="@+id/heart_attack"/>
+            <ImageView
+                android:layout_width="100sp"
+                android:layout_height="101sp"
+                android:layout_marginStart="10sp"
+                android:src="@drawable/theft_help"
+                android:id="@+id/theft_attack"/>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
